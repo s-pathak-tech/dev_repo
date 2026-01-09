@@ -22,10 +22,10 @@ with DAG(
         provide_context=True,
     )
 
-    task_2_IRIS_IG_SAPHANA_None = PythonOperator(
-        task_id="task_2_IRIS_IG_SAPHANA_None",
+    task_2_IRIS_IG_SAPHANA_SAPHANA = PythonOperator(
+        task_id="task_2_IRIS_IG_SAPHANA_SAPHANA",
         python_callable=call_microservice_generic,
         provide_context=True,
     )
 
-    task1_fetch_config >> task_2_IRIS_IG_SAPHANA_None
+    task1_fetch_config >> task_2_IRIS_IG_SAPHANA_SAPHANA
